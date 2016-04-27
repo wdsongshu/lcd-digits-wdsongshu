@@ -4,11 +4,10 @@ describe('lcd-digits', function () {
     beforeEach(function () {
         inputs = '910';
     });
-    describe('unit teat', function () {
+
+    describe('unit test', function () {
         describe('buildSplitedString teat', function () {
             it('return buildSplitedString', function () {
-
-
                 var splitedString = buildSplitedString(inputs);
 
                 var expectText = ['9', '1', '0'];
@@ -19,7 +18,8 @@ describe('lcd-digits', function () {
         describe('buldPrintItems test', function () {
             it('return buldPrintItems', function () {
                 var lcdNumberItems = loadAllItems();
-                var splitedString = buildSplitedString(inputs);
+
+                var splitedString = ['9', '1', '0'];
 
                 var printIems = buildPrintItems(splitedString, lcdNumberItems);
 
@@ -37,13 +37,10 @@ describe('lcd-digits', function () {
                     }
                 ];
 
-
-
                 expect(printIems).toEqual(expectText);
             });
         });
     });
-
 
     describe('integration test', function () {
         describe('print test', function () {
@@ -54,10 +51,10 @@ describe('lcd-digits', function () {
                 printReceipt(inputs);
 
                 var expectText =
-                    '._. ... ._.\n' +
-                    '|_| ..| |.|\n' +
-                    '..| ..|  |_|\n'
-                ;
+                        '._. ... ._.\n' +
+                        '|_| ..| |.|\n' +
+                        '..| ..|  |_|\n'
+                    ;
                 expect(console.log).toHaveBeenCalledWith(expectText);
             });
         });
