@@ -21,7 +21,7 @@ describe('lcd-digits', function () {
 
                 var splitedString = ['9', '1', '0'];
 
-                var printIems = buildPrintItems(splitedString, lcdNumberItems);
+                var printItems = buildPrintItems(splitedString, lcdNumberItems);
 
                 var expectText =
                     [
@@ -39,7 +39,7 @@ describe('lcd-digits', function () {
                         }
                     ];
 
-                expect(printIems).toEqual(expectText);
+                expect(printItems).toEqual(expectText);
             });
         });
     });
@@ -50,7 +50,7 @@ describe('lcd-digits', function () {
 
                 spyOn(console, 'log');
 
-                printReceipt(inputs);
+                printLcdNumber(inputs);
 
                 var expectText =
                         '._. ... ._.\n' +
