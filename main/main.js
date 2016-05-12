@@ -58,7 +58,6 @@ function buildPrint(printItems) {
                 print += ' ' + item;
             }
         });
-        console.log(print);
         printText += print + '\n';
     }
 

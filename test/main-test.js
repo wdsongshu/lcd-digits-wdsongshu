@@ -6,7 +6,8 @@ describe('lcd-digits', function () {
     });
 
     describe('unit test', function () {
-        describe('buildSplitedString teat', function () {
+
+        describe('buildSplitedString test', function () {
             it('return buildSplitedString', function () {
                 var splitedString = buildSplitedString(inputs);
 
@@ -15,6 +16,7 @@ describe('lcd-digits', function () {
                 expect(splitedString).toEqual(expectText);
             });
         });
+
         describe('buldPrintItems test', function () {
             it('return buldPrintItems', function () {
                 var lcdNumberItems = loadAllItems();
